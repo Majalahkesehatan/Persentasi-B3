@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Sampah B3 Rumah Sakit</title>
+    
+    <!-- Reveal.js Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css" id="theme">
+    
+    <!-- Font Awesome untuk Ikon Visual -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Kustomisasi CSS Modern -->
+    <style>
+        .reveal {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #1a365d;
+            text-transform: none;
+        }
+        /* Gradient Background untuk Slide Cover */
+        .bg-gradient {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white !important;
+        }
+        .bg-gradient h1, .bg-gradient h2, .bg-gradient p {
+            color: white !important;
+        }
+        .text-accent {
+            color: #38b2ac;
+        }
+        
+        /* Desain Kartu Klasifikasi */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 280px;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card i {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        /* Warna Standar Kantong Sampah B3 Medis Indonesia */
+        .kuning { border-bottom: 6px solid #f1c40f; }
+        .kuning i { color: #f1c40f; }
+        
+        .coklat { border-bottom: 6px solid #8e44ad; } /* Standar Farmasi/Sitotoksik */
+        .coklat i { color: #8e44ad; }
+        
+        .merah { border-bottom: 6px solid #e74c3c; }
+        .merah i { color: #e74c3c; }
+
+        /* Timeline / Alur CSS */
+        .timeline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .step {
+            background: #f8f9fa;
+            border: 2px solid #38b2ac;
+            padding: 20px;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .step i { font-size: 2rem; color: #1a365d; }
+        .step span { font-size: 0.9rem; font-weight: 600; margin-top: 8px; }
+        .arrow { font-size: 2rem; color: #cbd5e0; }
+
+        .image-rounded {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Cover -->
+            <section data-state="bg-gradient">
+                <i class="fa-solid fa-truck-medical" style="font-size: 4rem; margin-bottom: 20px; color: #38b2ac;"></i>
+                <h1 style="font-size: 3.5rem;">Manajemen Sampah <span class="text-accent">B3</span><br>Rumah Sakit</h1>
+                <p style="font-size: 1.5rem; opacity: 0.8;">Solusi Aman untuk Kesehatan dan Lingkungan</p>
+                <br>
+                <p style="font-size: 1rem; opacity: 0.6;">Gunakan panah (➔) pada keyboard untuk lanjut</p>
+            </section>
+
+            <!-- Slide 2: Definisi -->
+            <section>
+                <h2>Apa itu Sampah B3 Medis?</h2>
+                <div style="display: flex; align-items: center; gap: 40px; margin-top: 40px; text-align: left;">
+                    <div style="flex: 1;">
+                        <p class="fragment fade-up">Limbah <strong>Bahan Berbahaya dan Beracun (B3)</strong> Medis adalah sisa dari kegiatan klinis/medis yang mengandung bahan beracun, infeksius, atau radioaktif.</p>
+                        <p class="fragment fade-up">Jika tidak dikelola dengan benar, sampah ini berisiko menularkan penyakit kepada tenaga medis, pasien, dan mencemari lingkungan.</p>
+                    </div>
+                    <div style="flex: 1;" class="fragment zoom-in">
+                        <img src="https://images.unsplash.com/photo-1584483766114-2cea87348128?auto=format&fit=crop&w=600&q=80" alt="Hospital Waste" class="image-rounded">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Klasifikasi -->
+            <section>
+                <h2>Kategori Limbah B3 Rumah Sakit</h2>
+                <p>Pemilahan warna kantong standar nasional.</p>
+                
+                <div class="card-container">
+                    <div class="card kuning fragment fade-up" data-fragment-index="1">
+                        <i class="fa-solid fa-biohazard"></i>
+                        <h4>Infeksius</h4>
+                        <p>Kantong Kuning. Berisi jaringan tubuh, darah, atau alat yang terpapar pasien menular.</p>
+                    </div>
+                    
+                    <div class="card merah fragment fade-up" data-fragment-index="2">
+                        <i class="fa-solid fa-syringe"></i>
+                        <h4>Benda Tajam</h4>
+                        <p>Safety Box (Anti bocor). Jarum suntik, pisau bedah, pecahan kaca ampul.</p>
+                    </div>
+
+                    <div class="card coklat fragment fade-up" data-fragment-index="3">
+                        <i class="fa-solid fa-pills"></i>
+                        <h4>Farmasi & Kimia</h4>
+                        <p>Kantong Coklat/Ungu. Obat kedaluwarsa, sisa kemoterapi, dan reagen lab.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Alur Pengelolaan -->
+            <section data-auto-animate>
+                <h2>Alur Standar Pengelolaan</h2>
+                <p style="margin-bottom: 50px;">Siklus dari ruangan pasien hingga dimusnahkan.</p>
+                
+                <div class="timeline">
+                    <div class="step fragment fade-right">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <span>Pemilahan</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow fragment fade-right"></i>
+                    
+                    <div class="step fragment fade-right">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>TPS B3</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow fragment fade-right"></i>
+                    
+                    <div class="step fragment fade-right">
+                        <i class="fa-solid fa-truck-moving"></i>
+                        <span>Pengangkutan</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow fragment fade-right"></i>
+                    
+                    <div class="step fragment fade-right">
+                        <i class="fa-solid fa-fire"></i>
+                        <span>Incinerator</span>
+                    </div>
+                </div>
+                
+                <p class="fragment fade-up" style="margin-top: 40px; font-size: 1.1rem; color: #e74c3c;">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Kunci utama keberhasilan ada pada <strong>Pemilahan (Langkah 1)</strong> oleh tenaga medis.
+                </p>
+            </section>
+
+            <!-- Slide 5: Dampak Kelalaian -->
+            <section>
+                <h2>Dampak Buruk Kelalaian</h2>
+                <ul style="line-height: 2; font-size: 1.4rem;">
+                    <li class="fragment slide-up">Meningkatnya risiko <strong>Infeksi Nosokomial</strong> (HAI's) di rumah sakit.</li>
+                    <li class="fragment slide-up">Tertusuk jarum suntik bekas pada petugas kebersihan (Cleaning Service).</li>
+                    <li class="fragment slide-up">Pencemaran sumber air tanah dari limbah cair bahan kimia.</li>
+                    <li class="fragment slide-up">Sanksi hukum pidana dan pencabutan izin operasional RS.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 6: Penutup -->
+            <section data-state="bg-gradient">
+                <i class="fa-solid fa-leaf" style="font-size: 4rem; color: #38b2ac; margin-bottom: 20px;"></i>
+                <h2>Mari Jaga Keselamatan Bersama</h2>
+                <p>Pengelolaan limbah medis yang baik mencerminkan<br>kualitas pelayanan rumah sakit yang paripurna.</p>
+                <br><br>
+                <h3>Terima Kasih</h3>
+                <p style="font-size: 1rem; opacity: 0.7;">Ada Pertanyaan?</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+    <script>
+        // Konfigurasi Standar Profesional
+        Reveal.initialize({
+            width: 1280,            // Menjamin rasio 16:9 (1280x720)
+            height: 720,
+            margin: 0.1,
+            hash: true,             // URL akan berubah sesuai nomor slide (bagus untuk GitHub Pages)
+            controls: true,         // Panah navigasi di pojok kanan bawah
+            progress: true,         // Bar progres di bagian paling bawah
+            center: true,
+            transition: 'convex',   // Animasi pergantian slide: convex, concave, zoom, slide, fade
+            backgroundTransition: 'fade',
+            
+            // Konfigurasi state untuk background dinamis
+            dependencies: []
+        });
+
+        // Event listener untuk mengubah background slide tertentu
+        Reveal.on('bg-gradient', function() {
+            document.querySelector('.reveal').style.background = 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)';
+            document.querySelector('.reveal').style.color = 'white';
+        });
+        
+        Reveal.on('slidechanged', function(event) {
+            if(!event.currentSlide.hasAttribute('data-state')){
+                document.querySelector('.reveal').style.background = '';
+                document.querySelector('.reveal').style.color = '#333';
+            }
+        });
+    </script>
+</body>
+</html>
